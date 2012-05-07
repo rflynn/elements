@@ -179,6 +179,8 @@ def img(e):
 
     width, height = size, size
 
+    maxnamewidth = size - (border * 2) + 6
+
     # setup a place to draw
     #surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
     surface = cairo.ImageSurface.create_from_png("img/sheetmetal.png")
@@ -215,9 +217,6 @@ def img(e):
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
-    ctx.select_font_face('Sans',
-                cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(35)
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
     ctx.move_to(160 - w - 1, 44)
     thicker(e, ctx, (r,g,b))
@@ -234,9 +233,6 @@ def img(e):
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
-    ctx.select_font_face('Century Schoolbook L',
-                cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(80)
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
     ctx.move_to(((width - w) / 2.0) - 1, 109)
     thicker(e, ctx, (r,g,b))
@@ -245,18 +241,21 @@ def img(e):
     ####################
 
     s = e.name
-    ctx.select_font_face('Sans',
+    ctx.select_font_face('Arial',
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
     ctx.set_font_size(21)
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
+
+    if w >= maxnamewidth:
+        ctx.set_font_size(20)
+        ctx.select_font_face('Arial',
+                cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
+        x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
+
     ctx.move_to((width - w) / 2, 145)
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
-    s = e.name
-    ctx.select_font_face('Sans',
-                cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(21)
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
     ctx.move_to(((width - w) / 2) - 1, 144)
     thicker(e, ctx, (r,g,b))
@@ -264,6 +263,7 @@ def img(e):
 
     ####################
 
+    """
     s = e.weight
     ctx.select_font_face('Sans',
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
@@ -273,13 +273,11 @@ def img(e):
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
-    ctx.select_font_face('Sans',
-                cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
-    ctx.set_font_size(18)
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
     ctx.move_to(((width - w) / 2.0) - 1, 164)
     thicker(e, ctx, (r,g,b))
     ctx.show_text(s)
+    """
 
     ####################
 
