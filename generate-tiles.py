@@ -162,10 +162,10 @@ import cairo
 def thicker(e, ctx, (r,g,b)):
     """the thicker parts of metals will be lighter colored (polished); gases will be darker because they're thicker"""
     if e.group in [Group.Metal.Trans, Group.Metal.PostTrans]:
-        diff = +0.05
+        diff = +0.03
     else:
-        diff = -0.05
-    ctx.set_source_rgba(r+diff,g+diff,b+diff,0.5)
+        diff = -0.03
+    ctx.set_source_rgba(r+diff,g+diff,b+diff,0.4)
 
 def img(e):
 
@@ -179,11 +179,13 @@ def img(e):
 
     width, height = size, size
 
-    maxnamewidth = size - (border * 2) + 6
+    maxnamewidth = size - (border * 2) - 6
 
     # setup a place to draw
-    #surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
-    surface = cairo.ImageSurface.create_from_png("img/sheetmetal.png")
+    if e.group in [Group.NonMetal,Group.NobleGas]:
+        surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
+    else:
+        surface = cairo.ImageSurface.create_from_png("img/sheetmetal.png")
     ctx = cairo.Context(surface)
 
     # paint background
@@ -229,12 +231,12 @@ def img(e):
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
     ctx.set_font_size(80)
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to((width - w) / 2.0, 110)
+    ctx.move_to((width - w) / 2.0, 115)
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to(((width - w) / 2.0) - 1, 109)
+    ctx.move_to(((width - w) / 2.0) - 1, 114)
     thicker(e, ctx, (r,g,b))
     ctx.show_text(s)
 
@@ -243,7 +245,7 @@ def img(e):
     s = e.name
     ctx.select_font_face('Arial',
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(21)
+    ctx.set_font_size(24)
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
 
     if w >= maxnamewidth:
@@ -252,12 +254,12 @@ def img(e):
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
         x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
 
-    ctx.move_to((width - w) / 2, 145)
+    ctx.move_to((width - w) / 2, 153)
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to(((width - w) / 2) - 1, 144)
+    ctx.move_to(((width - w) / 2) - 1, 152)
     thicker(e, ctx, (r,g,b))
     ctx.show_text(s)
 
