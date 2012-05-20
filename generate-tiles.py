@@ -1,6 +1,40 @@
+# ex: set ts=4 et:
 
 """
+Generate images for each tile of the elements of the Periodic Table
+All speculative/mock tile art, as well as SVG tile designs.
+The ultimate goal being to generate cutting plans (g-code) for a CNC machine,
+either to be machined directly or to be reversed and cut into a mold.
+
+Tiles are square, 2 inches per side with the following basic layout:
++-------------------------+
+| +---------------------+ |
+| |                     | |
+| |            Atomic # | |
+| |                     | |
+| |                     | |
+| |   Chemical Symbol   | |
+| |                     | |
+| |                     | |
+| |    English Name     | |
+| |                     | |
+| +---------------------+ |
++-------------------------+
+
+Originally I was going to include atomic weight on separate 4th line, but the
+values for atomic weight are constantly in flux, and indeed even the concept
+of a single number with which to reflect atomic mass, isotopes and natural
+abundance is now seen by many as conceptually flawed; therefore I will restrict
+myself to the universal (atomic number) and worldwide standards (Latin-based
+symbols and American English names)
+
+Ref:
+    http://en.wikipedia.org/wiki/Atomic_weight
+    http://en.wikipedia.org/wiki/Natural_abundance
+
 """
+
+import cairo
 
 class Group:
     Unknown         =  0
@@ -157,7 +191,10 @@ elements = [
     Element(118, "Uuo","Ununoctium",   "",               Group.Metal.Trans),
 ]
 
-import cairo
+def px_per_inch(): return 72
+
+def inch(measure):
+	return int(px_per_inch() * measure)
 
 def thicker(e, ctx, (r,g,b)):
     """the thicker parts of metals will be lighter colored (polished); gases will be darker because they're thicker"""
@@ -169,35 +206,29 @@ def thicker(e, ctx, (r,g,b)):
 
 def img(e):
 
-    size = 180
-    border = 12
+    size = inch(2)
+    border = inch(1/8.)
     r,g,b = e.color
 
-    r = float(r) / 0xff
-    g = float(g) / 0xff
-    b = float(b) / 0xff
+    r = r / 255.
+    g = g / 255.
+    b = b / 255.
 
     width, height = size, size
-
-    maxnamewidth = size - (border * 2) - 6
 
     # setup a place to draw
     if e.group in [Group.NonMetal,Group.NobleGas]:
         surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
     else:
-        surface = cairo.ImageSurface.create_from_png("img/sheetmetal.png")
+        surface = cairo.ImageSurface.create_from_png("img/sheetmetal-144.png")
     ctx = cairo.Context(surface)
 
-    # paint background
+    # Background
     ctx.set_source_rgba(r,g,b,0.5)
     ctx.rectangle(0, 0, width, height)
     ctx.fill()
 
-    #bg = cairo.ImageSurface.create_from_png("img/bg-metal.png")
-    #ctx.set_source_surface(bg, width, height)
-    #ctx.paint()
-
-    # border
+    # Border
     ctx.set_source_rgba(0,0,0,0.1)
     ctx.set_line_width(border)
     ctx.rectangle(border/2+1, border/2+1, width-border, height-border)
@@ -208,84 +239,66 @@ def img(e):
     ctx.rectangle(border/2, border/2, width-border, height-border)
     ctx.stroke()
 
-    ####################
-
+    # Number
     s = str(e.number)
-    ctx.select_font_face('Sans',
+    ctx.select_font_face('Arial Bold',
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(35)
+    ctx.set_font_size(inch(15/32.))
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to(160 - w, 45)
+    l = size - border - w - inch(1/16.)
+    t = border + h + inch(1/16.)
+    ctx.move_to(l, t)
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
-    x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to(160 - w - 1, 44)
+    ctx.move_to(l-1, t-1)
     thicker(e, ctx, (r,g,b))
     ctx.show_text(s)
 
-    ####################
-
+    # Chemical Symbol
     s = e.symbol
+    # the symbol should have a little style
     ctx.select_font_face('Century Schoolbook L',
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(80)
+    ctx.set_font_size(inch(1))
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to((width - w) / 2.0, 115)
+    l = (width - w) / 2.0
+    t = size - border - inch(9/16.)
+    ctx.move_to(l, t)
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
-    x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to(((width - w) / 2.0) - 1, 114)
+    ctx.move_to(l-1, t-1)
     thicker(e, ctx, (r,g,b))
     ctx.show_text(s)
 
-    ####################
-
+    # English (American) Name
+    maxnamewidth = size - (border * 2) - inch(1/16.)
     s = e.name
-    ctx.select_font_face('Arial',
-                cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(24)
-    x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
+    w = float("inf")
+    fontsize = 24 + 1
 
-    if w >= maxnamewidth:
-        ctx.set_font_size(20)
+    while w >= maxnamewidth and fontsize > 1.0:
+        fontsize -= 1
         ctx.select_font_face('Arial',
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
+        ctx.set_font_size(fontsize)
         x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
 
-    ctx.move_to((width - w) / 2, 153)
+    l = (width - w) / 2.
+    t = size - border - inch(1/8.)
+    ctx.move_to(l, t)
     ctx.set_source_rgba(0,0,0,0.2)
     ctx.show_text(s)
 
-    x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to(((width - w) / 2) - 1, 152)
+    ctx.move_to(l-1, t-1)
     thicker(e, ctx, (r,g,b))
     ctx.show_text(s)
 
-    ####################
-
-    """
-    s = e.weight
-    ctx.select_font_face('Sans',
-                cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
-    ctx.set_font_size(18)
-    x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to((width - w) / 2.0, 165)
-    ctx.set_source_rgba(0,0,0,0.2)
-    ctx.show_text(s)
-
-    x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    ctx.move_to(((width - w) / 2.0) - 1, 164)
-    thicker(e, ctx, (r,g,b))
-    ctx.show_text(s)
-    """
-
-    ####################
-
-    # finish up
+    # Finish up
     ctx.stroke() # commit to surface
-    surface.write_to_png('img/tile/%03u-%s.png' % (e.number, e.symbol))
+    filename = "img/tile/%03u-%s.png" % (e.number, e.symbol)
+    surface.write_to_png(filename)
 
 if __name__ == '__main__':
     print elements
