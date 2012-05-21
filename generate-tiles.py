@@ -204,7 +204,9 @@ def thicker(e, ctx, (r,g,b)):
         diff = -0.03
     ctx.set_source_rgba(r+diff,g+diff,b+diff,0.4)
 
-def img(e):
+def img(e, fileformat):
+
+    assert fileformat in ["svg","png"]
 
     size = inch(2)
     border = inch(1/8.)
@@ -216,28 +218,40 @@ def img(e):
 
     width, height = size, size
 
+    # keep our content >= 1/16" from the border
+    inneredge = size - (border * 2) - inch(1/16.)
+
+    filename = "img/tile/%03u-%s.%s" % (e.number, e.symbol, "svg" if fileformat == "svg" else "png")
+
     # setup a place to draw
-    if e.group in [Group.NonMetal,Group.NobleGas]:
-        surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
+    if fileformat == "svg":
+        fobj = open(filename, "w")
+        surface = cairo.SVGSurface(fobj, width, height)
     else:
-        surface = cairo.ImageSurface.create_from_png("img/sheetmetal-144.png")
+        if e.group in [Group.NonMetal,Group.NobleGas]:
+            surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
+        else:
+            surface = cairo.ImageSurface.create_from_png("img/sheetmetal-144.png")
+
     ctx = cairo.Context(surface)
 
     # Background
-    ctx.set_source_rgba(r,g,b,0.5)
-    ctx.rectangle(0, 0, width, height)
-    ctx.fill()
+    if fileformat == "png":
+        ctx.set_source_rgba(r,g,b,0.5 if fileformat == "png" else 1.0)
+        ctx.rectangle(0, 0, width, height)
+        ctx.fill()
 
     # Border
-    ctx.set_source_rgba(0,0,0,0.1)
+    ctx.set_source_rgba(0,0,0,0.1 if fileformat == "png" else 1.0)
     ctx.set_line_width(border)
-    ctx.rectangle(border/2+1, border/2+1, width-border, height-border)
+    ctx.rectangle(border/2, border/2, width-border+1, height-border+1)
     ctx.stroke()
 
-    thicker(e, ctx, (r,g,b))
-    ctx.set_line_width(border)
-    ctx.rectangle(border/2, border/2, width-border, height-border)
-    ctx.stroke()
+    if fileformat == "png":
+        thicker(e, ctx, (r,g,b))
+        ctx.set_line_width(border)
+        ctx.rectangle(border/2, border/2, width-border, height-border)
+        ctx.stroke()
 
     # Number
     s = str(e.number)
@@ -245,40 +259,46 @@ def img(e):
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
     ctx.set_font_size(inch(15/32.))
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
-    l = size - border - w - inch(1/16.)
+    l = size - 2 - border - w - inch(1/16.)
     t = border + h + inch(1/16.)
     ctx.move_to(l, t)
-    ctx.set_source_rgba(0,0,0,0.2)
+    ctx.set_source_rgba(0,0,0,0.2 if fileformat == "png" else 1.0)
     ctx.show_text(s)
 
-    ctx.move_to(l-1, t-1)
-    thicker(e, ctx, (r,g,b))
-    ctx.show_text(s)
+    if fileformat == "png":
+        ctx.move_to(l-1, t-1)
+        thicker(e, ctx, (r,g,b))
+        ctx.show_text(s)
 
     # Chemical Symbol
     s = e.symbol
-    # the symbol should have a little style
+    # the symbol font should have some style
     ctx.select_font_face("Century Schoolbook L",
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
-    ctx.set_font_size(inch(1))
-    x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
+    fontsize = inch(1) + 1
+    w = float("inf")
+    while w > inneredge and fontsize > 1.0:
+        fontsize -= 1
+        ctx.set_font_size(fontsize)
+        x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
+
     l = (width - w) / 2.0
     t = size - border - inch(9/16.)
     ctx.move_to(l, t)
-    ctx.set_source_rgba(0,0,0,0.2)
+    ctx.set_source_rgba(0,0,0,0.2 if fileformat == "png" else 1.0)
     ctx.show_text(s)
 
-    ctx.move_to(l-1, t-1)
-    thicker(e, ctx, (r,g,b))
-    ctx.show_text(s)
+    if fileformat == "png":
+        ctx.move_to(l-1, t-1)
+        thicker(e, ctx, (r,g,b))
+        ctx.show_text(s)
 
     # English (American) Name
-    maxnamewidth = size - (border * 2) - inch(1/16.)
     s = e.name
     w = float("inf")
     fontsize = 24 + 1
 
-    while w >= maxnamewidth and fontsize > 1.0:
+    while w >= inneredge and fontsize > 1.0:
         fontsize -= 1
         ctx.select_font_face("Arial",
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
@@ -288,28 +308,32 @@ def img(e):
     l = (width - w) / 2.
     t = size - border - inch(1/8.)
     ctx.move_to(l, t)
-    ctx.set_source_rgba(0,0,0,0.2)
+    ctx.set_source_rgba(0,0,0,0.2 if fileformat == "png" else 1.0)
     ctx.show_text(s)
 
-    ctx.move_to(l-1, t-1)
-    thicker(e, ctx, (r,g,b))
-    ctx.show_text(s)
+    if fileformat == "png":
+        ctx.move_to(l-1, t-1)
+        thicker(e, ctx, (r,g,b))
+        ctx.show_text(s)
 
     # Finish up
-    ctx.stroke() # commit to surface
-    filename = "img/tile/%03u-%s.png" % (e.number, e.symbol)
-    surface.write_to_png(filename)
+    ctx.stroke()
+    surface.flush()
+    if fileformat == "png":
+        surface.write_to_png(filename)
+    surface.finish()
 
 if __name__ == "__main__":
 
     import os
 
     try:
-        os.makedirs("img/tile/svg")
+        os.makedirs("img/tile")
     except:
         pass
 
     print elements
     for e in elements:
-        img(e)
+        img(e, "svg")
+        img(e, "png")
 
