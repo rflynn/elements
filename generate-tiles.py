@@ -66,7 +66,7 @@ class Element:
                 color = (0xC0,0xC0,0xC0)
         self.color = color
     def __repr__(self):
-        return '%s(%u)' % (self.name, self.number)
+        return "%s(%u)" % (self.name, self.number)
 
 elements = [
     Element(  1, "H",  "Hydrogen",     "1.0.7594",       Group.NonMetal),
@@ -210,9 +210,9 @@ def img(e):
     border = inch(1/8.)
     r,g,b = e.color
 
-    r = r / 255.
-    g = g / 255.
-    b = b / 255.
+    r /= 255.
+    g /= 255.
+    b /= 255.
 
     width, height = size, size
 
@@ -241,7 +241,7 @@ def img(e):
 
     # Number
     s = str(e.number)
-    ctx.select_font_face('Arial Bold',
+    ctx.select_font_face("Arial Bold",
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
     ctx.set_font_size(inch(15/32.))
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
@@ -258,7 +258,7 @@ def img(e):
     # Chemical Symbol
     s = e.symbol
     # the symbol should have a little style
-    ctx.select_font_face('Century Schoolbook L',
+    ctx.select_font_face("Century Schoolbook L",
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
     ctx.set_font_size(inch(1))
     x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
@@ -280,7 +280,7 @@ def img(e):
 
     while w >= maxnamewidth and fontsize > 1.0:
         fontsize -= 1
-        ctx.select_font_face('Arial',
+        ctx.select_font_face("Arial",
                 cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD)
         ctx.set_font_size(fontsize)
         x_bearing, y_bearing, w, h = ctx.text_extents(s)[:4]
@@ -300,7 +300,15 @@ def img(e):
     filename = "img/tile/%03u-%s.png" % (e.number, e.symbol)
     surface.write_to_png(filename)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+
+    import os
+
+    try:
+        os.makedirs("img/tile/svg")
+    except:
+        pass
+
     print elements
     for e in elements:
         img(e)
