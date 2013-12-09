@@ -1,0 +1,77 @@
+
+hand-held MAPP torch
+
+induction furnace
+	spectacularly elegant, but they're complex, expensive and electricity hogs
+
+arc furnace
+	indirect or direct
+	Moissan vs. steel-making
+	very high temperatures achievable and quite efficient
+	240v
+	arc welder
+	body
+	optional -- vacuum
+
+propane-powered foundry-style furnace
+	research seems to suggest:
+	bbq-style propane tank
+		cheap, ubiquitous and propane burns surprisingly hot
+	burner
+		some people make their own, but i got mine from HarborFreight 
+	furnace body
+		cylindrical, taller than wide, hole in the side bottom for burner
+		must be steel, not aluminium
+		small hole at the bottom so spilled metal has somewhere to go -- smart!
+		possibles:
+			gallon paint can -- ~8"x6" is doable but seems too small to melt iron
+			large piping
+			small garbage can
+			stock pot
+				http://www.walmart.com/ip/Mainstays-16-Quart-Stock-Pot/20713638
+			used drum -- http://www.youtube.com/watch?v=SRcQqnoDgks
+				14" high x ~14" wide
+	furnace floor
+		 "It is a really good idea to put something hard in the bottom of a forge, just to resist wear and tear. A hard brick or a kiln self from a ceramic supplier is good." -- http://bbs.homeshopmachinist.net/archive/index.php/t-51886.html
+	insulation
+		2" kaowool + refractory coating
+		or >= 2" refractory cement
+	refractory coating
+		"Satanite and Mizzou are castable refractories. The ITC and Plistix are Infrared coatings used to retain more heat in the forge. Cover the wool with a refractory cement unless you want to develop silicosis or mesothelioma in 20 years. Then coat with the ITC and you will have good heat retention. Ive never used Plistix." -- http://www.iforgeiron.com/topic/24282-itc-100-vs-plistix-900f-vs-satanite-vs-mizzou/
+		professional products are expensive -- $50-100
+		ITC-100 -- http://www.hightemptools.com/itcproducts.html
+		Plistix 900F -- http://www.zoellerforge.com/flare.html
+		Fiberfrax QF-180 -- 
+		zircon paint -- expensive, i think outrageously expensive now...
+	furnace top
+		small hole in the center to allow air out
+		should be massive -- clay/cemnt/brick
+	air blower
+		$10 air mattress inflator -- http://www.youtube.com/watch?v=Z2wGV6g7I6E
+
+	examples:
+		http://www.youtube.com/watch?v=1DyeESQpac0 -- How to build a small cast iron melting furnace
+			propane
+			furnace body: 20L steel oil drum
+			furnace floor: fireclay and Kaowool
+			2" kaowool attached with sodium silicate
+			zircon paint refractory
+			melts 1.6 kgs of cast iron
+			No 1 clay graphite crucible
+		http://www.youtube.com/watch?v=SRcQqnoDgks -- Foundry Furnace Dimensions
+		http://www.youtube.com/watch?v=Z2wGV6g7I6E "Small propane furnace heats to 1500oC in ten minutes"
+		http://www.youtube.com/watch?v=NXvkAaniNYE&list=UUJArDPDoXa4a1vzvNqvbu1A -- Iron casting 2nd attempt, mold leaks out :-(
+		http://www.zoellerforge.com/miniforge.html -- very clean and elegant blacksmithing mini-forge
+
+
+Plistix 900F
+
+suppliers:
+	* http://www.budgetcastingsupply.com/Crucibles.php
+	* http://www.zoellerforge.com/index.html
+		http://www.zoellerforge.com/flare.html
+			0 x 1" thick  3000°F  90% Alumina Firebrick
+			2 x 1lb Plistix 900F 
+	* http://hightemptools.com/
+
+http://www.youtube.com/watch?v=E3my6-nxFjM "Clay/Refractory crucible"
