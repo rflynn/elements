@@ -1,5 +1,8 @@
 
-11 Sodium
+3 Li Lithium
+	"The metal is produced electrolytically from a mixture of fused 55% lithium chloride and 45% potassium chloride at about 450o C.[70] In 1998 it was about 95 US$ / kg (or 43 US$/pound)" -- https://en.wikipedia.org/wiki/Lithium#Production
+
+11 Na Sodium
 	get unscented mineral oil -- do i have some already? look around
 	1 3/4" Na graphite mold
 	1 3/4" back mold
@@ -24,6 +27,200 @@
 	remove sodium from mold without breaking it...
 	put sodium tile into acrylic case with short end on the bottom
 
+12 Mg Magnesium
+	sheet -> cut -> chemical etch
+		nitric acid is mentioned in several places...
+		Chemical etching was performed in a 1:50 solution of hydrochloric acid in deionized water and through a micropatterned photoresist mold. Commercial magnesium foils (70-μm-thick) were cleaned with solvent and citric acid to remove surface residues and oxides. Prior to photoresist patterning, one side of the magnesium foils was spin-coated with PDMS and mounted onto a glass substrate to confine etching to the opposite side and to serve as a substrate for the etched structures. Planar circular coils were fabricated by the chemical etching of magnesium foil through a photoresist mask (Microposit S1813 positive resist) featuring 50-μm-wide gaps and 250-μm-wide lines. Etched samples were immersed in acetone to remove the photoresist mask and released from the underlying substrate. -- http://www.mems.gatech.edu/msma/publications/2013/Methods%20for%20the%20microfabrication%20of%20magnesium.pdf
+
+	sheet/block -> cut -> melt with electric furnace
+	oxidizes rapidly and destructively and cannot be stopped
+	melting point: 650°C
+	autoignition temperature: 510°C
+	this means we need to cover Mg
+	flux:
+		"...during the melting stage and comprises a mixture of chlorides, such as MgCl2, with KCl or NaCl. The other adds a mixture of CaF2, MgF2 and MgO."
+			"...MgCl solidifies above the melt temperature, causing flux inclusions in the casting..." -- http://books.google.com/books?id=uuQA1cdh78AC&pg=PA110&dq=melt+cast+magnesium++flux&hl=en&sa=X&ei=rv6nUry6OIvJsQT_zYLwCA&ved=0CDQQ6AEwAQ#v=onepage&q=melt%20cast%20magnesium%20%20flux&f=false
+		"...until pouring is complete oxidation is controlled by dusting the surface of the molten metal with a mixture of equal parts of coarse sulfur and fine boric acid."
+		-- http://books.google.com/books?id=0wFMfJg57YMC&pg=PA58&lpg=PA58&dq=magnesium+flux+melting&source=bl&ots=WCR38U6Xw7&sig=gg9qcYi3QWNxNHXmKR4SboZhDVE&hl=en&sa=X&ei=vdinUofjEq7IsASO9oHQDw&ved=0CCkQ6AEwAA#v=onepage&q=magnesium%20flux%20melting&f=false
+	"Magnesium is flammable, burning at a temperature of approximately 3,100 °C (3,370 K; 5,610 °F),[7] and the autoignition temperature of magnesium ribbon is approximately 473 °C (746 K; 883 °F).[25] " -- https://en.wikipedia.org/wiki/Magnesium
+	"dry bulk metal to 250F to drive off any residual water"
+	"dry air"
+	"Mixtures of CO2, CO2-air, or air alone combined with 0.3 to 0.5% SF6 have been succesfully used for melt protection in casting operations... Presently only a handful of foundries practice fluxless recycling of magnesium scrap."
+
+13 Al Aluminium
+
+	HCl -- http://www.youtube.com/watch?v=sZmjiX3Ak40&list=PL322DACD6E8A912C7&index=6
+
+	http://www.elume.com/faq
+	a. 8-20% sodium hydroxide at 140-180°F
+	b. Ferric chloride 36 Baume (somewhat spent bath)
+	c. Muriatic acid 20% by volume
+
+14 Si Silicon
+	a. Ferric chloride 38 Baume 4 parts + nitric acid 4 parts + hydrofluoric acid 1 part
+	http://www.elume.com/faq
+
+	http://www.virginiasemi.com/pdf/siliconetchingandcleaning.pdf
+
+	http://en.wikipedia.org/wiki/Etching_(microfabrication)
+	"Several anisotropic wet etchants are available for silicon, all of them hot aqueous caustics. For instance, potassium hydroxide (KOH)..."
+	Etchant	Operating temp (°C)	R100 (μm/min)	S=R100/R111	Mask materials
+	Ethylenediamine pyrocatechol (EDP)[1]	110	0.47	17	SiO2, Si3N4, Au, Cr, Ag, Cu
+	Potassium hydroxide/Isopropyl alcohol (KOH/IPA)	50	1.0	400	Si3N4, SiO2 (etches at 2.8 nm/min)
+	Tetramethylammonium hydroxide (TMAH)[2]	80	0.6	37	Si3N4, SiO2
+
+	"SiO2 is attacked by KOH to give soluble potassium silicates..."
+	https://en.wikipedia.org/wiki/Potassium_hydroxide#Reactions_with_inorganic_compounds
+
+	"Glass reacts slowly with aqueous sodium hydroxide solutions at ambient temperatures to form soluble silicates"
+	https://en.wikipedia.org/wiki/Sodium_hydroxide#Reaction_with_amphoteric_metals_and_oxides
+
+
+21 Sc Scandium
+
+	World production of scandium is in the order of 2 tonnes per year in the form of scandium oxide. The primary production is 400 kg while the rest is from stockpiles of Russia generated during the Cold War. In 2003, only three mines produced scandium: the uranium and iron mines in Zhovti Vody in Ukraine, the rare earth mines in Bayan Obo, China and the apatite mines in the Kola peninsula, Russia. In each case, scandium is a byproduct from the extraction of other elements[11] and is sold as scandium oxide.
+
+	The production of metallic scandium is in the order of 10 kg per year.[11][12] The oxide is converted to scandium fluoride and reduced with metallic calcium. -- https://en.wikipedia.org/wiki/Scandium
+
+	Metallic scandium was produced for the first time in 1937 by electrolysis of a eutectic mixture, at 700–800 °C, of potassium, lithium, and scandium chlorides.[21] The first pound of 99% pure scandium metal was produced in 1960.
+
+22 Ti Titanium
+	sheet + cut + acid etch
+	"I’ve found a blend of oxalic acid (HCO) and sodium bi-fluoride in a grocery store laundry section bottled as a rust remover. This etches the titanium, but can leave a carbon residue, that is easy to remove." -- http://mrtitanium.info/2011/08/09/q-what-common-materials-can-be-used-to-etch-titanium/
+
+	oxalic acid
+		ref: http://www.finishing.com/134/32.shtml
+		ref: http://www.cleanroom.byu.edu/wet_etch.phtml "COOHCOOH : H2O – any concentration"
+		ref: http://www.researchgate.net/post/What_could_be_the_alternative_for_Hydrofluoric_acid_in_etching_titanium_metal
+		ref: http://www.kssfp.jp/pdf/ICJD6-1Kurogi_1-7.pdf
+
+	1 : 2 NH4OH : H2O2 (ammonia : hydrogen peroxide) -- http://www.cleanroom.byu.edu/wet_etch.phtml
+		"In our lab, we use H2O2:NH4OH=2:1 to etch titanium and it produces nice results." -- http://www.researchgate.net/post/What_could_be_the_alternative_for_Hydrofluoric_acid_in_etching_titanium_metal
+
+	%NaOH- conc
+		http://www.cleanroom.byu.edu/wet_etch.phtml
+
+	"Ti can be etched also with strongly oxidizing solution. like Piranha or H2O2 all alone. It is only matter of: how much do you want to etch..."
+	http://www.researchgate.net/post/What_could_be_the_alternative_for_Hydrofluoric_acid_in_etching_titanium_metal
+
+	HCl + H2O2
+		http://developing-your-web-presence.blogspot.com/2008/10/on-titanium-thermite-bronze-age-and.html
+		Chemical identification: for this you'll need strong hydrochloric acid (HCl 20 w% or more - 30 w% is better) and some pharmacy or hair dye grade hydrogen peroxide (H2O2, a few w%). Crush up some of the metal with a hammer (due to contamination with oxygen and nitrogen it's rather brittle) and put it in a test tube or otherwise suitable glass container and immerse it in the acid for 24 h or so. As small amounts of hydrogen sulphide (rotten eggs gas - see below) will be formed, store the assembly in a well ventilated place, away from your living quarters.
+Although titanium is well known and desired for its excellent corrosion resistance, strong hydrochloric acid does attack it noticeably but slowly even at ambient temperatures, with the ubiquitous evolution of hydrogen gas. Titanium (III) chloride (TiCl3) is formed, which, depending on concentration has a beautiful, amethyst-like purple hue. After the overnight soak in HCl, carefully add a few drops of the hydrogen peroxide to the solution: a beautiful deep red, caused by a very characteristic red colour from a titanium (IV) peroxo complex being formed. A more detailed explanation can be found here.
+
+	1 : 2 NH4OH : H2O2 -- http://www.cleanroom.byu.edu/wet_etch.phtml
+	"Try ammonium hydroxide, hydrogen peroxide, and water. Use volumes of 1:1:5. Maybe too vigorous if so then add additional water. Worked on removing titanium from evaporation systems."
+	http://www.finishing.com/134/32.shtml
+
+	20%H3PO4 (phosphoric acid -- sometimes used in rust removers)
+
+	http://www.elume.com/faq
+	a. Hydrofluoric acid
+	b. Hydrofluoric-nitric acids
+	b. Hydrofluoric acid 1 part - water 20 parts
+
+	"An etching solution for titanium-based metals, tungsten-based metals, titanium/tungsten-based metals or their nitrides. The etching solution contains 10-40 mass % hydrogen peroxide, 0.1-15 mass % of an organic acid salt, and water."
+	"An etching solution for titanium-based metals, tungsten-based metals, titanium/tungsten-based metals or their nitrides, according to claim 1, wherein the organic acid salt is at least one selected from among ammonium salts of citric acid, formic acid, oxalic acid, acetic acid, tartaric acid, benzoic acid and succinic acid." -- http://www.faqs.org/patents/app/20110147341
+
+	"Try ammonium hydroxide, hydrogen peroxide, and water. Use volumes of 1:1:5. Maybe too vigorous if so then add additional water. Worked on removing titanium from evaporation systems." -- http://www.finishing.com/134/32.shtml
+
+	http://uk.answers.yahoo.com/question/index?qid=20110823082243AAEnbuy
+	Try ammonium bifluoride and nitric acid... try 30-40% HNO3 and 15g/l NH4HF2 (balance water) and adjust as necessary. It will depend on your application: are you just cleaning the surface or really trying to remove metal?  This bath works at room temperature.
+
+23 Vanadium
+
+	https://en.wikipedia.org/wiki/Vanadium
+	"As an alternative for small-scale production, vanadium pentoxide is reduced with hydrogen or magnesium."
+	Economically significant examples include patronite (VS4),[26] vanadinite (Pb5(VO4)3Cl), and carnotite (K2(UO2)2(VO4)2·3H2O). Much of the world's vanadium production is sourced from vanadium-bearing magnetite found in ultramafic gabbro bodies. Vanadium is mined mostly in South Africa, north-western China, and eastern Russia. In 2010 these three countries mined more than 98% of the 56,000 tonnes of produced vanadium.
+
+24 Cr Chromium
+	http://www.elume.com/faq
+	a. Hydrochloric acid 1 part + water 1 part
+	b. Ferric chloride 2 parts + hydrochloric acid 1 part
+
+25 Mn Manganese
+	http://www.elume.com/faq
+	a. Hydrochloric acid 1 part + water 1 part
+	b. Ferric chloride 2 parts + hydrochloric acid 1 part
+
+26 Fe Iron
+
+	a. Ferric chloride 36 Baume 90°F
+	http://www.elume.com/faq
+
+	1 : 1	H2O : HCL
+	http://www.cleanroom.byu.edu/wet_etch.phtml
+
+	thermite
+
+27 Co Cobalt
+	3 : 1	HCl : H2O2
+	http://www.cleanroom.byu.edu/wet_etch.phtml
+
+28 Ni Nickel
+	a. Ferric chloride 36 Baume 120°F
+	http://www.elume.com/faq
+
+29 Cu Copper
+
+	30%	FeCl3 saturated solution
+	4 : 1 : 5	 HCL : FeCl3 : H2O
+	http://www.cleanroom.byu.edu/wet_etch.phtml
+
+	a. Ferric chloride 36 Baume 90°F
+	b. Ammonium persulfate 2 lbs./gal solution
+	c. Chromic-sulfuric acid mixtures
+	http://www.elume.com/faq
+
+41 Nb Niobium
+	1 : 1 - HF : HNO3
+	http://www.cleanroom.byu.edu/wet_etch.phtml
+
+42 Mo Molybdenum
+
+	1 : 1 - HCl : H2O2
+	http://www.cleanroom.byu.edu/wet_etch.phtml
+
+	a. Sulfuric acid 1 part + nitric 1 part + H2O 3 parts
+	b. Nitric acid 1 part + HC1 1 part + H2O 1-2 parts
+	c. Electric etch in 5% sodium hydroxide
+	http://www.elume.com/faq
+
+	http://blog.conardcorp.com/blog/bid/228849/The-Benefits-and-Drawbacks-of-Photo-Etching-with-Ferric-Chloride
+	However, ferric chloride doesn’t etch everything.  In particular, the “noble” metals: gold, silver, platinum, palladium, tantalum won’t etch in ferric chloride.  The so-called “high temp” metals: titanium, molybdenum, tungsten, cobalt, chromium, niobium also do not etch in ferric.
+
+72 Hf Hafnium
+	buy scrap -> graphite mold + argon-arc cast
+
+	World primary hafnium production statistics are not available. Hafnium occurs with zirconium in the minerals zircon and baddeleyite.
+	http://minerals.usgs.gov/minerals/pubs/commodity/zirconium/mcs-2008-zirco.pdf
+
+74 W Tungsten
+	sheet -> cut -> stack + etch
+	cutting: it would really be best to find a waterjet
+	etch
+		305g : 44.5g : 1000ml K3Fe(CN)6 : NaOH : H2O – rapid etch -- http://www.cleanroom.byu.edu/wet_etch.phtml
+			Potassium ferricyanide is the chemical compound with the formula K3[Fe(CN)6]
+
+	http://www.elume.com/faq
+		a. Electrolytic in 5% sodium hydroxide
+		b. Nitric acid 12-15% by volume
+
+	"* Hydrogen Peroxide (H2O2)"
+	http://en.wikipedia.org/wiki/Etching_(microfabrication)#Common_etch_processes_used_in_microfabrication
+
+	... or ...
+
+	TIG pure W electrodes + graphite(?) mold + vacuum arc/ebeam melt
+
+85 At Astatine
+	"Elemental astatine has never been viewed, because a mass large enough to be seen (by the naked human eye) would be immediately vaporized by the heat generated by its own radioactivity." -- https://en.wikipedia.org/wiki/Astatine
+
+94 Pu Plutonium
+	"...an actinide metal of silvery-gray appearance that tarnishes when exposed to air, and forms a dull coating when oxidized."
+
+	"Plutonium is the heaviest primordial element by virtue of its most stable isotope, plutonium-244, whose half-life of about 80 million years is just long enough for the element to be found in trace quantities in nature."
+
 silicone mold
 
 	http://www.youtube.com/watch?v=M400dj19nUs
@@ -38,9 +235,20 @@ silicone mold
 	scale
 	mixing cup
 
-amazing mold putty
-	bad surface finish reported
-oomoo
+	silicone caulk as mold material
+		http://www.youtube.com/watch?v=LbHZaQg0Br0
+		"Good Video. FYI: you can make a NON TOXIC silicone caulk mold, by using a caulking that releases ACETIC ACID (it will have a vinegar smell) on cure. (check the fine print on the label.) Get a bucket of HOT Water, mix in a bunch of SUNLIGHT BRAND DISH SOAP till its electric green/yellow, dunk your hand in and squeeze a golf ball size silicone ball into your hand. Keep your hand wet, and massage/knead thoroughly the silicone  for 1-2 min (This will wash the retardant out.) The silicone will appear translucent, and be semi clear when pressed on and applied. It will dry in under an hour. It will adhere to itself even after drying, so you can build up thickness if needed.)   No more Naptha, no more toxic fumes. Worst I ever got was dish pan hands. It isn't the greatest silicone mold material for detail, as it will leave flashing and lines and is NOT pourable, but at 3-5 bucks a tube it is again the cheaper alternative to Platinum cure silicones. Happy Moldmaking!"
+		http://makezine.com/2010/11/04/reader-research-diy-casting-silicon/
+		"I found that when making a mould you can use a 4 to 1 ratio of paint thinner to caulk (2 oz of caulk to 1/2 oz of paint thinner) to make a small mould using the bottom of a plastic cup. I added in about 3 drops (literally drops) of paint to the mix in order to help show the details of the mould. Once I had a consistent mix of paint thinner to caulk I added in about 1 tbs of corn starch as the hardening agent. This gave me about 5 to 10 minutes worth of pot time and fully set within 45 minutes."
+		http://matrixarmory.blogspot.com/2012/01/mold-making-cheap-and-easy.html
+		"Make sure that you don't apply it thicker than 1/8". This silicone cures when the acetic acid evaporates. If you layer it on too thick, the top layer will cure trapping a layer of uncured gooey silicone."
+		"-Molds tear relatively easily (you could reinforce the silicone by adding a layer some burlap to the second layer while it is still tacky"
+		"It would be important to specifiy what type of silicone to get, because not all are appropriate for use in making molds. It needs to be RTV (Vulcanizing) silicone. Many other silicones are air-dry - only the outside will dry, and the the inside will remain gooey, especially for thick molds."
+		"I've had some really good results with this method. GREAT for making first draft parts. My advice for anyone who hasn't tried this is give the siliocone a few days to cure before trying to demold. Also, for larger pieces that don't require as much stretch, a layer of cheese cloth embedded into the silicone really adds strength. If you need a faster turn-around or for a longer lasting mold get some smooth-on. It's stronger easier to work with and doesn't stink."
+
+Sulfuric acid can be produced in the laboratory by burning sulfur in air and dissolving the gas produced in a hydrogen peroxide solution.
+	SO2 + H2O2 → H2SO4
+https://en.wikipedia.org/wiki/Sulfuric_acid#Other_methods
 
 
 
