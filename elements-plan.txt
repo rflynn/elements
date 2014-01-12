@@ -2,6 +2,37 @@
 3 Li Lithium
 	"The metal is produced electrolytically from a mixture of fused 55% lithium chloride and 45% potassium chloride at about 450o C.[70] In 1998 it was about 95 US$ / kg (or 43 US$/pound)" -- https://en.wikipedia.org/wiki/Lithium#Production
 
+5 B Boron
+	powder + mold + electric furnace -> sintered?
+	"The operation is almost invariably carried out under a protective atmosphere, because of the large surface areas involved, and at temperatures between 60 and 90% of the melting-point of the particular metal or alloys."... http://www.azom.com/article.aspx?ArticleID=1725
+	
+	http://www.instructables.com/id/DIY-Copper-Clay-Trilobites/?ALLSTEPS
+
+	The first precious metal clays were introduced in the 1990's - made from pure silver powder and organic binders...
+	The silver clay behaved kind of like a ceramic clay, could be molded, sculpted, carved, extruded etc.
+	The metal clay was then 'fired' in a kiln or by torch, to produce a pure metal item.
+
+	...Because it resists oxidation, fine silver can be fused by heat in an oxygen (normal atmosphere) environment such as in a kiln or open torch flame.
+	When particles are heated, close to melting temperature, but not melting, they move close together and become sticky, adhereing to each other.
+	This compaction and partial fusing is called 'sintering'.
+
+	The basic recipe is organic binders, atomized metal (-325 mesh or smaller), glycerin and water.
+
+	1/2 tsp. corn starch
+	1/4 tsp. powdered xanthan gum (do not breathe in the powder!  It forms a VERY gummy slime when mixed with water)
+	glycerin - a few drops adds a little flexibility
+	3+  Tbsp atomized pure copper*
+	distilled water in a small spray bottle.
+
+	...
+
+	http://www.metalclayacademy.com/
+
+	https://en.wikipedia.org/wiki/Sintering
+		In 1913, Weintraub and Rush patented a modified sintering method which combined electric current with pressure. The benefits of this method were proved for the sintering of refractory metals as well as conductive carbide or nitride powders. The starting boron–carbon or silicon–carbon powders were placed in an electrically insulating tube and compressed by two rods which also served as electrodes for the current. The estimated sintering temperature was 2000 °C.
+
+	https://en.wikipedia.org/wiki/Metal_clay
+
 11 Na Sodium
 	get unscented mineral oil -- do i have some already? look around
 	1 3/4" Na graphite mold
