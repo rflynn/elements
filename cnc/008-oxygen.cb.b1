@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CADFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="0.9.8.0" Name="008-oxygen" units="Inches">
+  <layers>
+    <layer name="Default" color="127,255,0">
+      <ModificationCount>0</ModificationCount>
+      <objects>
+        <rect id="1" Closed="true" w="2" h="2">
+          <ModificationCount>29</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>0,0,0</p>
+            <p>2,0,0</p>
+            <p>2,2,0</p>
+            <p>0,2,0</p>
+          </pts>
+        </rect>
+        <text id="2" p1="1,1.25,-0.02" Height="0.74999999999999989" Font="Century" align="center,center" style="bold">
+          <ModificationCount>63</ModificationCount>
+          <mat m="Identity" />O</text>
+        <text id="3" p1="1.8,1.5,-0.02" Height="0.4" Font="Trebuchet MS" align="bottom,right">
+          <ModificationCount>49</ModificationCount>
+          <mat m="Identity" />8</text>
+        <text id="4" p1="1,0.48,-0.02" Height="0.3" Font="Verdana" align="bottom,center">
+          <ModificationCount>60</ModificationCount>
+          <mat m="Identity" />Oxygen</text>
+        <text id="5" p1="1,0.18,-0.02" Height="0.25" Font="Trebuchet MS" align="bottom,center">
+          <ModificationCount>30</ModificationCount>
+          <mat m="Identity" />16.00</text>
+        <rect id="6" Closed="true" p="0.125,0.125,0" w="1.75" h="1.75">
+          <ModificationCount>19</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>0.125,0.125,0</p>
+            <p>1.875,0.125,0</p>
+            <p>1.875,1.875,0</p>
+            <p>0.125,1.875,0</p>
+          </pts>
+        </rect>
+      </objects>
+    </layer>
+  </layers>
+  <MachiningOptions>
+    <OutFile>{$cbfile.name}.nc</OutFile>
+    <Stock>
+      <PMin>0,0</PMin>
+      <PMax>0,0</PMax>
+      <Color>255,165,0</Color>
+    </Stock>
+    <ToolProfile>Unspecified</ToolProfile>
+  </MachiningOptions>
+  <parts>
+    <part Name="Part1">
+      <machineops>
+        <engrave>
+          <WorkPlane state="Default">XY</WorkPlane>
+          <OptimisationMode state="Default">Experimental</OptimisationMode>
+          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <ToolDiameter state="Value">0.0078125</ToolDiameter>
+          <ToolNumber state="Default">0</ToolNumber>
+          <ToolProfile state="Default">Unspecified</ToolProfile>
+          <PlungeFeedrate state="Value">4</PlungeFeedrate>
+          <CutFeedrate state="Value">8</CutFeedrate>
+          <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
+          <StartPoint state="Default" />
+          <CustomMOPHeader state="Default" />
+          <CustomMOPFooter state="Default" />
+          <Name>Engrave1</Name>
+          <StockSurface state="Default">0</StockSurface>
+          <RoughingClearance state="Default">0</RoughingClearance>
+          <ClearancePlane state="Default">0.125</ClearancePlane>
+          <SpindleDirection state="Default">CW</SpindleDirection>
+          <SpindleSpeed state="Default">1000</SpindleSpeed>
+          <SpindleRange state="Default">0</SpindleRange>
+          <VelocityMode state="Default">Undefined</VelocityMode>
+          <primitive>
+            <prim>2</prim>
+            <prim>3</prim>
+            <prim>4</prim>
+            <prim>5</prim>
+          </primitive>
+          <TargetDepth state="Value">-0.001</TargetDepth>
+          <DepthIncrement state="Value">0.001</DepthIncrement>
+          <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
+          <CutOrdering state="Default">DepthFirst</CutOrdering>
+        </engrave>
+      </machineops>
+      <Stock>
+        <PMin>0,0</PMin>
+        <PMax>0,0</PMax>
+        <Color>255,165,0</Color>
+      </Stock>
+      <ToolProfile>Unspecified</ToolProfile>
+      <Nesting>
+        <BasePoint>0,0</BasePoint>
+        <NestMethod>None</NestMethod>
+      </Nesting>
+    </part>
+  </parts>
+  <ActiveLayer>Default</ActiveLayer>
+  <ActivePart>Part1</ActivePart>
+</CADFile>
