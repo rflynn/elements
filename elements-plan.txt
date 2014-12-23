@@ -38,7 +38,7 @@
 	1 3/4" Na graphite mold
 	1 3/4" back mold
 	need a 1 3/4" silicone mold
-		silicone mold works:
+		silicone mold works: https://www.youtube.com/watch?v=oOvSoOcQsFM
 		hard mold crumbles: http://www.youtube.com/watch?v=OPl_2ubC_mA
 	silica gel
 	desiccator bag
@@ -60,6 +60,7 @@
 
 12 Mg Magnesium
 	sheet -> cut -> chemical etch
+        HCl clearly works: https://www.youtube.com/watch?v=doZ9G9R3yfg
 		nitric acid is mentioned in several places...
 		Chemical etching was performed in a 1:50 solution of hydrochloric acid in deionized water and through a micropatterned photoresist mold. Commercial magnesium foils (70-μm-thick) were cleaned with solvent and citric acid to remove surface residues and oxides. Prior to photoresist patterning, one side of the magnesium foils was spin-coated with PDMS and mounted onto a glass substrate to confine etching to the opposite side and to serve as a substrate for the etched structures. Planar circular coils were fabricated by the chemical etching of magnesium foil through a photoresist mask (Microposit S1813 positive resist) featuring 50-μm-wide gaps and 250-μm-wide lines. Etched samples were immersed in acetone to remove the photoresist mask and released from the underlying substrate. -- http://www.mems.gatech.edu/msma/publications/2013/Methods%20for%20the%20microfabrication%20of%20magnesium.pdf
 
@@ -80,6 +81,7 @@
 
 13 Al Aluminium
 
+    sheet -> cut -> etch
 	HCl -- http://www.youtube.com/watch?v=sZmjiX3Ak40&list=PL322DACD6E8A912C7&index=6
 
 	http://www.elume.com/faq
@@ -90,6 +92,10 @@
 14 Si Silicon
 	a. Ferric chloride 38 Baume 4 parts + nitric acid 4 parts + hydrofluoric acid 1 part
 	http://www.elume.com/faq
+
+    Tried etch testing with NaOH at room temp for a week... nothing
+
+    HF:HNO3 http://www.cleanroom.byu.edu/wet_etch.phtml
 
 	http://www.virginiasemi.com/pdf/siliconetchingandcleaning.pdf
 
@@ -116,10 +122,13 @@
 	Metallic scandium was produced for the first time in 1937 by electrolysis of a eutectic mixture, at 700–800 °C, of potassium, lithium, and scandium chlorides.[21] The first pound of 99% pure scandium metal was produced in 1960.
 
 22 Ti Titanium
-	sheet + cut + acid etch
+	sheet -> cut -> acid etch
+
+    HF + H2O @ room temp worked great
+
 	"I’ve found a blend of oxalic acid (HCO) and sodium bi-fluoride in a grocery store laundry section bottled as a rust remover. This etches the titanium, but can leave a carbon residue, that is easy to remove." -- http://mrtitanium.info/2011/08/09/q-what-common-materials-can-be-used-to-etch-titanium/
 
-	oxalic acid
+	oxalic acid: room temp did not work
 		ref: http://www.finishing.com/134/32.shtml
 		ref: http://www.cleanroom.byu.edu/wet_etch.phtml "COOHCOOH : H2O – any concentration"
 		ref: http://www.researchgate.net/post/What_could_be_the_alternative_for_Hydrofluoric_acid_in_etching_titanium_metal
@@ -165,11 +174,17 @@ Although titanium is well known and desired for its excellent corrosion resistan
 	Economically significant examples include patronite (VS4),[26] vanadinite (Pb5(VO4)3Cl), and carnotite (K2(UO2)2(VO4)2·3H2O). Much of the world's vanadium production is sourced from vanadium-bearing magnetite found in ultramafic gabbro bodies. Vanadium is mined mostly in South Africa, north-western China, and eastern Russia. In 2010 these three countries mined more than 98% of the 56,000 tonnes of produced vanadium.
 
 24 Cr Chromium
+
+    HCl @ room temp did not work
+
 	http://www.elume.com/faq
 	a. Hydrochloric acid 1 part + water 1 part
 	b. Ferric chloride 2 parts + hydrochloric acid 1 part
 
 25 Mn Manganese
+    it's impossible to find manganese sheet given its aggressive rusting in air
+        substitute etched Iron as a first step
+        eventually this'll likely have to be cast
 	http://www.elume.com/faq
 	a. Hydrochloric acid 1 part + water 1 part
 	b. Ferric chloride 2 parts + hydrochloric acid 1 part
@@ -178,11 +193,16 @@ Although titanium is well known and desired for its excellent corrosion resistan
 
 	a. Ferric chloride 36 Baume 90°F
 	http://www.elume.com/faq
+        FeCl @ room temp was effective, but the lines are not crisp.
+            this was with the metal face-up, try it with face-down
+            with the plate vertically aligned it produces wavy patterns in the metal, which are cool but unwanted
 
 	1 : 1	H2O : HCL
 	http://www.cleanroom.byu.edu/wet_etch.phtml
 
 	thermite
+        thermite worked but produced highly oxidized porous metal
+            a larger amount could work
 
 27 Co Cobalt
 	3 : 1	HCl : H2O2
@@ -191,12 +211,16 @@ Although titanium is well known and desired for its excellent corrosion resistan
 28 Ni Nickel
 	a. Ferric chloride 36 Baume 120°F
 	http://www.elume.com/faq
+    FeCl worked, but poorly.
+    HF:HNO3
 
 29 Cu Copper
 
 	30%	FeCl3 saturated solution
 	4 : 1 : 5	 HCL : FeCl3 : H2O
 	http://www.cleanroom.byu.edu/wet_etch.phtml
+
+    FeCl worked great, looks beautiful.
 
 	a. Ferric chloride 36 Baume 90°F
 	b. Ammonium persulfate 2 lbs./gal solution
@@ -206,11 +230,17 @@ Although titanium is well known and desired for its excellent corrosion resistan
 41 Nb Niobium
 	1 : 1 - HF : HNO3
 	http://www.cleanroom.byu.edu/wet_etch.phtml
+    HF:HNO3 @ room temp take 1 did not work -- i think it was due to weak HNO3 - test it!
 
 42 Mo Molybdenum
 
+    sheet -> cut -> etch
+
 	1 : 1 - HCl : H2O2
 	http://www.cleanroom.byu.edu/wet_etch.phtml
+
+        @ room temp this worked well, but slowly
+        took ~5 days to etch; etched a bit too deep resulting in undercut, try 3 days next time
 
 	a. Sulfuric acid 1 part + nitric 1 part + H2O 3 parts
 	b. Nitric acid 1 part + HC1 1 part + H2O 1-2 parts
@@ -221,13 +251,16 @@ Although titanium is well known and desired for its excellent corrosion resistan
 	However, ferric chloride doesn’t etch everything.  In particular, the “noble” metals: gold, silver, platinum, palladium, tantalum won’t etch in ferric chloride.  The so-called “high temp” metals: titanium, molybdenum, tungsten, cobalt, chromium, niobium also do not etch in ferric.
 
 72 Hf Hafnium
+
+    impure sputtering target -> cut -> etch
+
 	buy scrap -> graphite mold + argon-arc cast
 
 	World primary hafnium production statistics are not available. Hafnium occurs with zirconium in the minerals zircon and baddeleyite.
 	http://minerals.usgs.gov/minerals/pubs/commodity/zirconium/mcs-2008-zirco.pdf
 
 74 W Tungsten
-	sheet -> cut -> stack + etch
+	sheet -> cut -> etch -> stack
 	cutting: it would really be best to find a waterjet
 	etch
 		305g : 44.5g : 1000ml K3Fe(CN)6 : NaOH : H2O – rapid etch -- http://www.cleanroom.byu.edu/wet_etch.phtml
@@ -243,6 +276,7 @@ Although titanium is well known and desired for its excellent corrosion resistan
 	... or ...
 
 	TIG pure W electrodes + graphite(?) mold + vacuum arc/ebeam melt
+
 
 85 At Astatine
 	"Elemental astatine has never been viewed, because a mass large enough to be seen (by the naked human eye) would be immediately vaporized by the heat generated by its own radioactivity." -- https://en.wikipedia.org/wiki/Astatine
