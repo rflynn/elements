@@ -1,4 +1,9 @@
 
+Trebuchet 36 bold
+Century Schoolbook T 64 bold
+Arial 32 bold
+Trebuchet 24 bold
+
 3 Li Lithium
 	"The metal is produced electrolytically from a mixture of fused 55% lithium chloride and 45% potassium chloride at about 450o C.[70] In 1998 it was about 95 US$ / kg (or 43 US$/pound)" -- https://en.wikipedia.org/wiki/Lithium#Production
 
@@ -89,6 +94,12 @@
 	b. Ferric chloride 36 Baume (somewhat spent bath)
 	c. Muriatic acid 20% by volume
 
+    http://www.finishing.com/142/47.shtml
+    NaOH
+    HNO3 + HF + H2O
+    HCl
+    FeCl3
+
 14 Si Silicon
 	a. Ferric chloride 38 Baume 4 parts + nitric acid 4 parts + hydrofluoric acid 1 part
 	http://www.elume.com/faq
@@ -169,6 +180,9 @@ Although titanium is well known and desired for its excellent corrosion resistan
 
 23 Vanadium
 
+    "Vanadium dissolves in concentrated sulfuric acid, nitric acid, hydrofluoric acid, and aqua regia."
+    https://www.webelements.com/vanadium/chemistry.html
+
 	https://en.wikipedia.org/wiki/Vanadium
 	"As an alternative for small-scale production, vanadium pentoxide is reduced with hydrogen or magnesium."
 	Economically significant examples include patronite (VS4),[26] vanadinite (Pb5(VO4)3Cl), and carnotite (K2(UO2)2(VO4)2·3H2O). Much of the world's vanadium production is sourced from vanadium-bearing magnetite found in ultramafic gabbro bodies. Vanadium is mined mostly in South Africa, north-western China, and eastern Russia. In 2010 these three countries mined more than 98% of the 56,000 tonnes of produced vanadium.
@@ -193,7 +207,7 @@ Although titanium is well known and desired for its excellent corrosion resistan
 
 	a. Ferric chloride 36 Baume 90°F
 	http://www.elume.com/faq
-        FeCl @ room temp was effective, but the lines are not crisp.
+        FeCl3 @ room temp was effective, but the lines are not crisp.
             this was with the metal face-up, try it with face-down
             with the plate vertically aligned it produces wavy patterns in the metal, which are cool but unwanted
 
@@ -211,8 +225,15 @@ Although titanium is well known and desired for its excellent corrosion resistan
 28 Ni Nickel
 	a. Ferric chloride 36 Baume 120°F
 	http://www.elume.com/faq
-    FeCl worked, but poorly.
+    FeCl3 worked, but poorly.
     HF:HNO3
+
+    "Nickel requires acid plus oxidizer to etch.
+    Dilute nitric acid (HNO3) is both in one. 
+    Try concentrations starting with 10:1 dilution until you get the speed you like.
+    Hydrogen peroxide plus HCl or maybe H2SO4, all dilute, may work well too. Then you can experiment with having more oxidizer than acid, or v/v. They certainly rinse off with water."
+    http://www.newton.dep.anl.gov/askasci/chem03/chem03370.htm
+
 
 29 Cu Copper
 
@@ -220,12 +241,17 @@ Although titanium is well known and desired for its excellent corrosion resistan
 	4 : 1 : 5	 HCL : FeCl3 : H2O
 	http://www.cleanroom.byu.edu/wet_etch.phtml
 
-    FeCl worked great, looks beautiful.
+    FeCl3 worked great, looks beautiful.
 
 	a. Ferric chloride 36 Baume 90°F
 	b. Ammonium persulfate 2 lbs./gal solution
 	c. Chromic-sulfuric acid mixtures
 	http://www.elume.com/faq
+
+39 Yttrium
+
+    Yttrium metal dissolves readily in dilute hydrochloric acid to form solutions containing the aquated Y(III) ion together with hydrogen gas, H2.
+    https://www.webelements.com/yttrium/chemistry.html
 
 41 Nb Niobium
 	1 : 1 - HF : HNO3
