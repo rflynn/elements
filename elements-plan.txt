@@ -4,8 +4,22 @@ Century Schoolbook T 64 bold
 Arial 32 bold
 Trebuchet 24 bold
 
+http://www.reddit.com/r/theydidthemath/comments/2m5upz/request_how_much_would_a_collection_of_3_cm_cubes/
+http://www.craftsmanshipmuseum.com/Maxton.htm
+
 3 Li Lithium
 	"The metal is produced electrolytically from a mixture of fused 55% lithium chloride and 45% potassium chloride at about 450o C.[70] In 1998 it was about 95 US$ / kg (or 43 US$/pound)" -- https://en.wikipedia.org/wiki/Lithium#Production
+    http://youtu.be/HJrNCjVS0gk?t=1m13s 11lb lithium ingot
+    https://www.youtube.com/watch?v=Lt6oKRQqoSc lithium mining
+
+4 Be Beryllium
+    The surface of beryllium metal is covered with a thin layer of oxide that helps protect the metal from attack by acids, but powdered beryllium metal dissolves readily in dilute acids such as sulphuric acid, H2SO4, hydrochloric acid, HCl, or nitric acid, HNO3, to form solutions containing the aquated Be(II) ion together with hydrogen gas, H2.
+    Beryllium metal dissolves readily in dilute aquesous base solutions such as sodium hydroxide, NaOH, to form Be(II) complexes together with hydrogen gas, H2. Magnesium (immediately below beryllium in the periodic table) does not do this.
+    -- https://www.webelements.com/beryllium/chemistry.html
+
+    The surface of beryllium metal is covered with a thin layer of oxide that helps protect the metal from attack by acids, but powdered beryllium metal dissolves readily in dilute acids such as sulphuric acid, H2SO4, hydrochloric acid, HCl, or nitric acid, HNO3, to form solutions containing the aquated Be(II) ion together with hydrogen gas, H2.
+    Beryllium metal dissolves readily in dilute aquesous base solutions such as sodium hydroxide, NaOH, to form Be(II) complexes together with hydrogen gas, H2.
+    https://www.webelements.com/beryllium/chemistry.html
 
 5 B Boron
 	powder + mold + electric furnace -> sintered?
@@ -65,9 +79,17 @@ Trebuchet 24 bold
 
 12 Mg Magnesium
 	sheet -> cut -> chemical etch
+
+        Magnesium metal dissolves readily in dilute sulphuric acid to form solutions containing the aquated Mg(II) ion together with hydrogen gas, H2. Corresponding reactions with other acids such as hydrochloric acid also give the aquated Mg(II) ion.
+        Mg(s) + 2HCl(aq) → Mg2+(aq) + 2Cl-(aq) + H2(g)
+        https://www.webelements.com/magnesium/chemistry.html
+
         HCl clearly works: https://www.youtube.com/watch?v=doZ9G9R3yfg
 		nitric acid is mentioned in several places...
 		Chemical etching was performed in a 1:50 solution of hydrochloric acid in deionized water and through a micropatterned photoresist mold. Commercial magnesium foils (70-μm-thick) were cleaned with solvent and citric acid to remove surface residues and oxides. Prior to photoresist patterning, one side of the magnesium foils was spin-coated with PDMS and mounted onto a glass substrate to confine etching to the opposite side and to serve as a substrate for the etched structures. Planar circular coils were fabricated by the chemical etching of magnesium foil through a photoresist mask (Microposit S1813 positive resist) featuring 50-μm-wide gaps and 250-μm-wide lines. Etched samples were immersed in acetone to remove the photoresist mask and released from the underlying substrate. -- http://www.mems.gatech.edu/msma/publications/2013/Methods%20for%20the%20microfabrication%20of%20magnesium.pdf
+
+    sheet -> cut -> machine
+    Mg is very machinable, even with mediocre tools; unfortunately my tile form factor requires small text details that are too fine to easily accomplish with my rudimentary setup
 
 	sheet/block -> cut -> melt with electric furnace
 	oxidizes rapidly and destructively and cannot be stopped
@@ -83,10 +105,15 @@ Trebuchet 24 bold
 	"dry bulk metal to 250F to drive off any residual water"
 	"dry air"
 	"Mixtures of CO2, CO2-air, or air alone combined with 0.3 to 0.5% SF6 have been succesfully used for melt protection in casting operations... Presently only a handful of foundries practice fluxless recycling of magnesium scrap."
+    after 1 tiny Mg fire, I'm done trying to melt it :)
 
 13 Al Aluminium
 
     sheet -> cut -> etch
+
+    HCl worked fairly fast, and left nice lines, though the etched surface was uneven.
+    Can try dilute sulfuric or NaOH to compare
+
 	HCl -- http://www.youtube.com/watch?v=sZmjiX3Ak40&list=PL322DACD6E8A912C7&index=6
 
 	http://www.elume.com/faq
@@ -94,13 +121,23 @@ Trebuchet 24 bold
 	b. Ferric chloride 36 Baume (somewhat spent bath)
 	c. Muriatic acid 20% by volume
 
+    Aluminium metal dissolves readily in dilute sulphuric acid to form solutions containing the aquated Al(III) ion together with hydrogen gas, H2. The corresponding reactions with dilute hydrochloric acid also give the aquated Al(III) ion. Concentrated nitric acid passivates aluminium metal.
+    https://www.webelements.com/aluminium/chemistry.html
+
     http://www.finishing.com/142/47.shtml
     NaOH
     HNO3 + HF + H2O
     HCl
     FeCl3
 
+    Can also try
+    https://www.webelements.com/aluminium/chemistry.html
+
 14 Si Silicon
+
+    Silicon does not react with most acids under normal conditions but is dissolved by hydrofluoric acid, HF
+    https://www.webelements.com/silicon/chemistry.html
+
 	a. Ferric chloride 38 Baume 4 parts + nitric acid 4 parts + hydrofluoric acid 1 part
 	http://www.elume.com/faq
 
@@ -183,6 +220,16 @@ Although titanium is well known and desired for its excellent corrosion resistan
     "Vanadium dissolves in concentrated sulfuric acid, nitric acid, hydrofluoric acid, and aqua regia."
     https://www.webelements.com/vanadium/chemistry.html
 
+    1 : 1 H2O : HNO3
+    1 : 1 HF : HNO3
+    http://www.cleanroom.byu.edu/wet_etch.phtml
+
+    Surface air vanadium slightly darker, however vanadium electrolytic crystals, after cleaning with dilute nitric acid, I sealed in the ampule under vacuum.
+    http://www.periodictable.ru/023V/V.html
+
+    It has good resistance to corrosion and it is stable against alkalis, sulfuric and hydrochloric acids
+    https://en.wikipedia.org/wiki/Vanadium#Characteristics
+
 	https://en.wikipedia.org/wiki/Vanadium
 	"As an alternative for small-scale production, vanadium pentoxide is reduced with hydrogen or magnesium."
 	Economically significant examples include patronite (VS4),[26] vanadinite (Pb5(VO4)3Cl), and carnotite (K2(UO2)2(VO4)2·3H2O). Much of the world's vanadium production is sourced from vanadium-bearing magnetite found in ultramafic gabbro bodies. Vanadium is mined mostly in South Africa, north-western China, and eastern Russia. In 2010 these three countries mined more than 98% of the 56,000 tonnes of produced vanadium.
@@ -196,12 +243,22 @@ Although titanium is well known and desired for its excellent corrosion resistan
 	b. Ferric chloride 2 parts + hydrochloric acid 1 part
 
 25 Mn Manganese
+
     it's impossible to find manganese sheet given its aggressive rusting in air
         substitute etched Iron as a first step
         eventually this'll likely have to be cast
 	http://www.elume.com/faq
 	a. Hydrochloric acid 1 part + water 1 part
 	b. Ferric chloride 2 parts + hydrochloric acid 1 part
+
+    Manganese is a silvery-gray metal that resembles iron. It is hard and very brittle, difficult to fuse, but easy to oxidize.[2] ... Manganese tarnishes slowly in air and "rusts" like iron, in water containing dissolved oxygen.
+        https://en.wikipedia.org/wiki/Manganese
+
+    Manganese can purify not only mechanically removing the oxide from the surface, but also rinsing the metal in acid. Due to the fact that manganese is a very active metal, used for cleaning need only dilute acid (HCl, HNO 3 ). With the concentrated reaction proceeds so rapidly that the mixture begins to boil.
+    http://www.periodictable.ru/025Mn/Mn.html
+
+    Manganese metal dissolves readily in dilute sulphuric acid to form solutions containing the aquated Mn(II) ion together with hydrogen gas, H2.
+    https://www.webelements.com/manganese/chemistry.html
 
 26 Fe Iron
 
@@ -227,6 +284,8 @@ Although titanium is well known and desired for its excellent corrosion resistan
 	http://www.elume.com/faq
     FeCl3 worked, but poorly.
     HF:HNO3
+        Don't use HF! It passivates Nickel
+    Pure HNO3 etches very quickly. Use it!
 
     "Nickel requires acid plus oxidizer to etch.
     Dilute nitric acid (HNO3) is both in one. 
@@ -247,6 +306,18 @@ Although titanium is well known and desired for its excellent corrosion resistan
 	b. Ammonium persulfate 2 lbs./gal solution
 	c. Chromic-sulfuric acid mixtures
 	http://www.elume.com/faq
+
+    Copper metal also dissolves in dilute or concentrated nitric acid, HNO3.
+
+32 Germanium
+
+    germanium lens -> cut -> acid etch
+
+    Because germanium is transparent in the infrared it is a very important infrared optical material, that can be readily cut and polished into lenses and windows... The material has a very high refractive index (4.0) and so needs to be anti-reflection coated. Particularly, a very hard special antireflection coating of diamond-like carbon (DLC), refractive index 2.0, is a good match and produces a diamond-hard surface that can withstand much environmental rough treatment.
+    https://en.wikipedia.org/wiki/Germanium#Optics
+
+    Germanium is insoluble in dilute acids and alkalis but dissolves slowly in concentrated sulfuric acid and reacts violently with molten alkalis
+    https://en.wikipedia.org/wiki/Germanium
 
 39 Yttrium
 
@@ -276,6 +347,15 @@ Although titanium is well known and desired for its excellent corrosion resistan
 	http://blog.conardcorp.com/blog/bid/228849/The-Benefits-and-Drawbacks-of-Photo-Etching-with-Ferric-Chloride
 	However, ferric chloride doesn’t etch everything.  In particular, the “noble” metals: gold, silver, platinum, palladium, tantalum won’t etch in ferric chloride.  The so-called “high temp” metals: titanium, molybdenum, tungsten, cobalt, chromium, niobium also do not etch in ferric.
 
+53 I Iodine
+    https://www.youtube.com/watch?v=gDGeXLiXxJw Melting of iodine crystals
+    https://www.youtube.com/watch?v=cGPNeNlP6us Iodine crystallization and melting in high vacuum-sealed ampoule
+
+56 Ba Barium
+    Barium is a soft, silvery-white metal, with a slight golden shade when ultrapure.
+    Ultrapure barium is very hard to prepare, and therefore many properties of barium have not been accurately measured yet.
+    https://en.wikipedia.org/wiki/Barium
+
 72 Hf Hafnium
 
     impure sputtering target -> cut -> etch
@@ -284,6 +364,11 @@ Although titanium is well known and desired for its excellent corrosion resistan
 
 	World primary hafnium production statistics are not available. Hafnium occurs with zirconium in the minerals zircon and baddeleyite.
 	http://minerals.usgs.gov/minerals/pubs/commodity/zirconium/mcs-2008-zirco.pdf
+
+73 Ta Tantalum
+
+    Tantalum appear not to be attacked by many acids at room temperature but does dissolve in hydrofluoric acid, HF, or oleum (a solution of sulphur trioxide, SO3, in sulphuric acid, H2SO4, also known as fuming sulphuric acid).
+    https://www.webelements.com/tantalum/chemistry.html
 
 74 W Tungsten
 	sheet -> cut -> etch -> stack
@@ -303,9 +388,41 @@ Although titanium is well known and desired for its excellent corrosion resistan
 
 	TIG pure W electrodes + graphite(?) mold + vacuum arc/ebeam melt
 
+75 Re Rhenium
+
+    Total world production is between 40 and 50 tons/year; the main producers are in Chile, the United States, Peru, and Poland.[35] Recycling of used Pt-Re catalyst and special alloys allow the recovery of another 10 tons per year.
+
+84 Polonium
+
+    Only about 100 grams are produced each year, practically all of it in Russia, making polonium exceedingly rare.
+
+    more than microscopic amounts of polonium can only be produced in state-regulated nuclear reactors
+    https://en.wikipedia.org/wiki/Poisoning_of_Alexander_Litvinenko#Sources_and_production_of_polonium
+
+    210Po is manufactured in a nuclear reactor by bombarding 209Bi with neutrons. 100 grams are produced each year, almost all in Russia.
+    https://en.wikipedia.org/wiki/Polonium#Commercial_products_containing_polonium
+
 
 85 At Astatine
 	"Elemental astatine has never been viewed, because a mass large enough to be seen (by the naked human eye) would be immediately vaporized by the heat generated by its own radioactivity." -- https://en.wikipedia.org/wiki/Astatine
+
+88 Radium
+    In 1954, the total worldwide supply of purified radium amounted to about 5 pounds (2.3 kg),[30] and it is still in this range today
+    https://en.wikipedia.org/wiki/Radium#Production
+
+    ...there is no agreement among scientists as to the true value of the melting point of radium.
+    https://en.wikipedia.org/wiki/Radium
+
+92 U Uranium
+    
+    It is a silvery-white metal in the actinide series of the periodic table.
+    Appearance	silvery gray metallic; corrodes to a spalling black oxide coat in air
+        https://en.wikipedia.org/wiki/Uranium
+
+93 Np Neptunium
+
+    Neptunium metal is silvery and tarnishes when exposed to air.
+        https://en.wikipedia.org/wiki/Neptunium
 
 94 Pu Plutonium
 	"...an actinide metal of silvery-gray appearance that tarnishes when exposed to air, and forms a dull coating when oxidized."
